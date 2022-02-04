@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script>
+$(document).ready(function () {
+	$('#moreInfo').validate({
+		rules: {
+			FirstName: {
+				required: true,
+				minlength: 4
+			},
+			LastName: {
+				required: true,
+				minlength: 4
+			},
+			TelephoneNumber: {
+			required: true,
+		digits: true,
+	min: 9,
+max: 20
+},
+EmailAddress: {
+	required: true,
+	EmailAddress: true
+ }
+},
+messages: {
+	FirstName: {
+	required: "Your first name is required",
+	minlength: "Must be more than three characters"
+},
+LastName: {
+required: "Your last name is required",
+minlength: "Must be more than three characters"
+},
+TelephoneNumber: {
+	required: "Please provide your telephoneNumber number",
+	min: "Must be greater than 9 digits",
+	max: "Must be less than 20 digits",
+	digits: "Must be numeric"
+},
+EmailAddress: {
+	required: "You must provide an email address",
+	EmailAddress: "Not a valid email address"
+}
+},
+submitHandler: function(form) {
+ form.submit();
+}
+});
+});
+</script>
+	<title> Contact</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.CSS" />
+	<meta charset=” utf-8”>
+<!-add meta tags below this comment line->
+<meta name="description" content="Contact Us">
+
+</head>
+<body>
+
+
+<div id= "container" class= "centertext">
+	<nav> <table><table class="menu td">
+		<tr><td><a href= "intro.html">Project</a></td> <td><a href= "index.html">Home</a></td> <td><a href= "About C. Elliott.html">About C. Elliott</a></td> <td><a href= "books.html">Books</a></td>
+		<td><a href= "media.html">Media</a> </td><td><a href= "store.html">Store</a> <td><a href= "booking.html">Booking</a> </td><td><a href= "contact.html">Contact Us</a> </td>
+			</tr></table class="menu td"></table></nav>
+			<br>
+
+	<h1> Contact Us </h1>
+	<div id= "left"> </div>
+	<div id="center"> <h2>Please feel free to reach out to us with all of your Questions, Comments, Prayer Requests, Testimonies, or for More Information!</h2>
+
+<form id="moreInfo" action="AddToMailList.php" method="post">
+	<ul> <li>	<label for "FirstName">First Name:</label>
+<input type="text" name="FirstName" id="FirstName"></li>
+<li> <label for "LastName">Last Name:</label>
+<input type="text" name="LastName" id="LastName"> </li>
+<li> <label for "TelephoneNumber">Telephone Number:</label>
+<input type="tel" name="TelephoneNumber" id="telephoneNumber"></li>
+<li> <label for "EmailAddress">Email Address:</label>
+<input type="email" name="EmailAddress" id= "EmailAddress>"</li>
+<li><label for "date">Today's Date:</label>
+<input type="date" name="date" id="date"> </li>
+Type of Request: <input type="radio" name= "type" id= "Question" value="Question">Question
+<input type="radio" name= "type" id= "Comment" value="Comment">Comment
+<input type="radio" name= "type" id= "Prayer Request" value="Prayer Request">Prayer Request
+<input type="radio" name= "type" id= "Testimonies" value="Testimonies">Testimonies
+<input type="radio" name= "type" id= "More Information" value="More Information">More Information</li>
+<li>Private or Public?
+<input type="checkbox" name="type" id="private" value= "Private">Private
+<input type="checkbox" name="type" id="public" value= "Public">Public</li>
+<li><textarea rows="4" cols= "50"> Type your thoughts</textarea></li>
+How did you hear about us? <select name="type" id="type">
+<option value="Radio">Radio</option>
+<option value="Facebook">Facebook</option>
+<option value="Instagram">Instagram</option></li>
+</select>
+<br>
+			<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+<br>
+
+<p> <h2>Follow CoPastorC1 on all social media @CoPastorC1</h2></p></div>
+<footer> <a href= "intro.html">Project</a> | <a href= "index.html">Home</a> | <a href= "About%20C.%20Elliott.html">About</a> | <a href= "books.html">Books</a> | <a href= "media.html">Media</a>| <a href= "Booking.html">Booking</a> | <a href= "store.html">Store</a> | <a href= "contact.html">Contact Us</a></footer></div>
+
+
+</body>
+
+</html>
